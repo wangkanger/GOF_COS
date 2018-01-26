@@ -93,27 +93,29 @@ public class DBManagerWithXmlLog extends DBManager {
    		    NodeList logList =doc.getElementsByTagName("log");
    		    Element root=(Element) logList.item(0);
    		    
-   		    Element action = doc.createElement("action");      
-   		    root.appendChild(action);   
-   		    //
-   		    /*
-   		    Element name = doc.createElement("name"); 
-   		    name.setTextContent("Action");
-   		    action.appendChild(name);   
-   		    //
-   		    Element s_time = doc.createElement("s-time"); 
-   		    s_time.setTextContent("startTime");
-   		    action.appendChild(s_time);
-   		    //
-   		    Element e_time = doc.createElement("e-time"); 
-   		    e_time.setTextContent("endTime");
-   		    action.appendChild(e_time);
-   		    //
-   		    Element result = doc.createElement("result");   
-   		    result.setTextContent("actionResult");
-   		    action.appendChild(result); 
+   		    Element Operation = doc.createElement("Operation"); 
+   		    Operation.setTextContent(operation);
+   		    root.appendChild(Operation);
    		    
-   		    */
+   		    Date day=new Date();
+   		    SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+   		    //System.out.println(df.format(day));
+   		    Element mTime = doc.createElement("mTime"); 
+   		    mTime.setTextContent(df.format(day));
+		    Operation.appendChild(mTime);
+		    
+   		    Element mType = doc.createElement("mType"); 
+   		    mType.setTextContent(map.get("mType").toString());
+   		    Operation.appendChild(mType);
+   		    
+   		    Element mName = doc.createElement("mName"); 
+		    mName.setTextContent(map.get("mName").toString());
+		    Operation.appendChild(mName);
+		    
+		    Element mPrice = doc.createElement("mPrice"); 
+   		    mPrice.setTextContent(map.get("mPrice").toString());
+   		    Operation.appendChild(mPrice);
+   	
    		    TransformerFactory  factory1=TransformerFactory.newInstance();
    		    Transformer transformer=factory1.newTransformer();
    		    transformer.setOutputProperty(OutputKeys.INDENT, "yes");

@@ -24,9 +24,14 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 public class Test {
 	public static void main(String[] args){
+		/*
 		for(int i=0;i<10;i++)
 			writePreActionXML("111","222");
 		System.out.println("Success!");
+		*/
+		Date day=new Date();
+		SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		System.out.println(df.format(day));
 
     }
 	//******
