@@ -1,1 +1,6 @@
 /readme.html
+/FinishedState.class
+/OrderState.class
+/PlacedState.class
+/PreparedState.class
+/StateTester.class

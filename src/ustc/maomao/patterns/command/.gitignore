@@ -1,1 +1,8 @@
 /readme.html
+/AddFoodCommand.class
+/Cart.class
+/CartCommand.class
+/CartCommandReceiver.class
+/CommandInvoker.class
+/CommandTester.class
+/RemoveFoodCommand.class

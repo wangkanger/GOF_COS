@@ -1,1 +1,6 @@
 /readme.html
+/FlyweightTester.class
+/GreetingMessage.class
+/GreetingMessageFac.class
+/IMessage.class
+/MessageSender.class

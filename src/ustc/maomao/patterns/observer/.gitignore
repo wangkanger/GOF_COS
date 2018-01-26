@@ -1,1 +1,7 @@
 /readme.html
+/EmailObserver.class
+/News.class
+/NewsObserver.class
+/NewsPublisher.class
+/ObserverTester.class
+/SMSObserver.class

@@ -1,1 +1,5 @@
 /readme.html
+/FoodLevelVisitor.class
+/FoodTypeVisitor.class
+/MealOrderVisitor.class
+/VisitorTester.class

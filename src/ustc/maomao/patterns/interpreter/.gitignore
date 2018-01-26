@@ -1,1 +1,9 @@
 /readme.html
+/AddExpression.class
+/InterpreterTester.class
+/LoginCodeVerifier.class
+/NonterminalExpression.class
+/SubExpression.class
+/TerminalExpression.class
+/ValueContext.class
+/ValueExpression.class

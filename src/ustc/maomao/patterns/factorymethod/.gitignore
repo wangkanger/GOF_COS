@@ -1,1 +1,8 @@
 /readme.html
+/Document.class
+/DocumentCreator.class
+/FactoryMethodTester.class
+/HtmlDocument.class
+/HtmlDocumentCreator.class
+/PdfDocument.class
+/PdfDocumentCreator.class

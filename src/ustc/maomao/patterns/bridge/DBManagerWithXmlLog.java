@@ -87,7 +87,7 @@ public class DBManagerWithXmlLog extends DBManager {
    		    try {
    		    	
    		    Document doc = null;   
-   		    doc = builder.parse("log.xml"); 
+   		    doc = builder.parse("./log.xml"); 
    		    //System.out.println("doc"+doc);
    		    
    		    NodeList logList =doc.getElementsByTagName("log");
@@ -120,7 +120,7 @@ public class DBManagerWithXmlLog extends DBManager {
    		    transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4"); 
    		    transformer.setOutputProperty(OutputKeys.METHOD, "xml");  
    		    transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-   		    transformer.transform(new DOMSource(doc),new StreamResult(new File("log.xml")));
+   		    transformer.transform(new DOMSource(doc),new StreamResult(new File("./log.xml")));
    		    //transformer.transform(xmlSource, outputTarget);
    		    }
    		    catch(Exception e)

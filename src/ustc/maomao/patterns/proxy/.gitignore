@@ -1,1 +1,7 @@
 /readme.html
+/ImageUpdater.class
+/MenuImage.class
+/MenuImageProxy$LazyLoadingTask.class
+/MenuImageProxy.class
+/ProxyTester.class
+/RealMenuImage.class

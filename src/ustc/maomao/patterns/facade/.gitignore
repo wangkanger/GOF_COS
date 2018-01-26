@@ -1,1 +1,7 @@
 /readme.html
+/Account.class
+/Bill.class
+/FacadeTester.class
+/PayLogger.class
+/PayRollDeductionFacade.class
+/PaySecurity.class
