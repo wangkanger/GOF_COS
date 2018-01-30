@@ -1,5 +1,9 @@
 package ustc.maomao.patterns.builder;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.Writer;
+
 /**
  * @author Keene. Mail: waterzhj@ustc.edu.cn
  * 
@@ -25,6 +29,22 @@ public class JSONBuilder implements TextBuilder {
 	 * @return 构造的json文本
 	 */
 	public JSONText getJsonText() {
+		//保存为json文件
+		try
+		{
+			File file = new File("menu.json");  
+			StringBuffer sb = new StringBuffer();
+			sb.append(json.getText().toString());
+			Writer write = new FileWriter(file); 
+			//System.out.println("####"+sb);
+	        write.write(sb.toString());  
+	        write.flush();  
+	        write.close();  
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		return json;
 	}
 

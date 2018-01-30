@@ -4,7 +4,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -22,6 +28,12 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 public class Test {
 	public static void main(String[] args){
 		/*
@@ -29,12 +41,65 @@ public class Test {
 			writePreActionXML("111","222");
 		System.out.println("Success!");
 		*/
-		Date day=new Date();
-		SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		System.out.println(df.format(day));
+		//Date day=new Date();
+		//SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		//System.out.println(df.format(day));
+		//readJson("fun.json");
+		//System.out.println("Success!");
+		try
+		{ 
+			FileOutputStream out = null;
+	        FileOutputStream outSTr = null;
+	        BufferedOutputStream Buff = null;
+	        FileWriter fw = null;
+			outSTr = new FileOutputStream(new File("menu.json"));
+            Buff = new BufferedOutputStream(outSTr);
+            Buff.write("测试java 文件操作\r\n".getBytes());
+           
+            Buff.flush();
+            Buff.close();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		System.out.println("Success!");
+
 
     }
-	//******
+	//度json文件
+	public static void readJson(String path)
+	{
+		 JsonParser parse =new JsonParser();  //创建json解析器
+	        try {
+	            JsonObject json=(JsonObject) parse.parse(new FileReader(path));  //创建jsonObject对象
+	            
+	            JsonArray array=json.get("MenuItems").getAsJsonArray();    //得到为json的数组
+	            for(int i=0;i<array.size();i++){
+	                System.out.println("---------------");
+	                JsonObject subObject=array.get(i).getAsJsonObject();
+	                System.out.println("MType="+subObject.get("MType").getAsInt());
+	                System.out.println("MName="+subObject.get("MName").getAsString());
+	                System.out.println("MPrice="+subObject.get("MPrice").getAsString());
+	            }
+	            /*
+	            System.out.println("resultcode:"+json.get("resultcode").getAsInt());  //将json数据转为为int型的数据
+	            System.out.println("reason:"+json.get("reason").getAsString());     //将json数据转为为String型的数据
+	             
+	            JsonObject result=json.get("result").getAsJsonObject();
+	            JsonObject today=result.get("today").getAsJsonObject();
+	            System.out.println("temperature:"+today.get("temperature").getAsString());
+	            System.out.println("weather:"+today.get("weather").getAsString());
+	             */
+	        } catch (JsonIOException e) {
+	            e.printStackTrace();
+	        } catch (JsonSyntaxException e) {
+	            e.printStackTrace();
+	        } catch (FileNotFoundException e) {
+	            e.printStackTrace();
+	        }
+	}
+	//写xml文件
 	public  static void writePreActionXML(String Action,String startTime)
 	{
 	//String ActionName=null;
@@ -91,6 +156,7 @@ public class Test {
 	    	e.printStackTrace();
 	    }
 	}
+	//增删查改
 	public static void CRUD()
 	{
         try{

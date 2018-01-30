@@ -1,5 +1,9 @@
 package ustc.maomao.patterns.builder;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.Writer;
+
 /**
  * @author Keene. Mail: waterzhj@ustc.edu.cn
  * 
@@ -27,6 +31,21 @@ public class XMLBuilder implements TextBuilder {
 	 * @return xml文本
 	 */
 	public XMLText getXMLText(){		
+		try
+		{
+			File file = new File("menu.xml");  
+			StringBuffer sb = new StringBuffer();
+			sb.append(xml.getText().toString());
+			Writer write = new FileWriter(file); 
+			//System.out.println("####"+sb);
+	        write.write(sb.toString());  
+	        write.flush();  
+	        write.close();  
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		return xml;
 	}
 

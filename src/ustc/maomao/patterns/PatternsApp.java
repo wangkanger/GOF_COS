@@ -5,6 +5,8 @@ import ustc.maomao.patterns.abstractfac.AbstractFacTester;
 import ustc.maomao.patterns.adapter.AdapterTester;
 import ustc.maomao.patterns.bridge.BridageTester;
 import ustc.maomao.patterns.builder.BuilderTester;
+import ustc.maomao.patterns.command.CommandTester;
+import ustc.maomao.patterns.composite.CompositeTester;
 import ustc.maomao.patterns.support.PatternTester;
 import ustc.maomao.patterns.visitor.VisitorTester;
 
@@ -35,10 +37,14 @@ public class PatternsApp {
 		//aft.test();
 		//AdapterTester at=new AdapterTester();//适配器模式
 		//at.test();
-		BridageTester bt=new BridageTester();//桥模式
-		bt.test();
-		//BuilderTester bt=new BuilderTester();
+		//BridageTester bt=new BridageTester();//桥模式
 		//bt.test();
+		//BuilderTester bt=new BuilderTester();//构造器模式
+		//bt.test();
+		//CommandTester ct=new CommandTester();//命令模式
+		//ct.test();
+		CompositeTester ct=new CompositeTester();//组合模式
+		ct.test();
 	}
 
 }

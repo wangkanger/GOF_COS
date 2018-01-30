@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MenuItems>
+<MenuItem>
+<MType value="0"/>
+<MName value="MenuItem0"/>
+<MPrice value="0.0"/>
+</MenuItem>
+<MenuItem>
+<MType value="1"/>
+<MName value="MenuItem1"/>
+<MPrice value="1.5"/>
+</MenuItem>
+<MenuItem>
+<MType value="2"/>
+<MName value="MenuItem2"/>
+<MPrice value="3.0"/>
+</MenuItem>
+<MenuItem>
+<MType value="3"/>
+<MName value="MenuItem3"/>
+<MPrice value="4.5"/>
+</MenuItem>
+<MenuItem>
+<MType value="4"/>
+<MName value="MenuItem4"/>
+<MPrice value="6.0"/>
+</MenuItem>
+<MenuItem>
+<MType value="5"/>
+<MName value="MenuItem5"/>
+<MPrice value="7.5"/>
+</MenuItem>
+<MenuItem>
+<MType value="6"/>
+<MName value="MenuItem6"/>
+<MPrice value="9.0"/>
+</MenuItem>
+<MenuItem>
+<MType value="7"/>
+<MName value="MenuItem7"/>
+<MPrice value="10.5"/>
+</MenuItem>
+<MenuItem>
+<MType value="8"/>
+<MName value="MenuItem8"/>
+<MPrice value="12.0"/>
+</MenuItem>
+<MenuItem>
+<MType value="9"/>
+<MName value="MenuItem9"/>
+<MPrice value="13.5"/>
+</MenuItem>
+</MenuItems>
