@@ -4,3 +4,5 @@
 /PlacedState.class
 /PreparedState.class
 /StateTester.class
+/CanceledState.class
+/PlacingState.class

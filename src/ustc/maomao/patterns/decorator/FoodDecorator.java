@@ -17,7 +17,7 @@ import ustc.maomao.patterns.support.FoodItem;
 public abstract class FoodDecorator implements FoodItem {
 
 	private FoodItem food;// 被包装的菜品对象
-
+  
 	public FoodDecorator(FoodItem fi) {
 		food = fi;
 	}

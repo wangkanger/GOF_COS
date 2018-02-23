@@ -1,5 +1,7 @@
 package ustc.maomao.patterns.support;
 
+import java.awt.EventQueue;
+
 import ustc.maomao.patterns.decorator.SimpleFood;
 import ustc.maomao.patterns.decorator.SpicyFood;
 import ustc.maomao.patterns.decorator.SweetFood;
@@ -7,7 +9,7 @@ import ustc.maomao.patterns.mediator.Colleague;
 import ustc.maomao.patterns.mediator.ColleagueMediator;
 import ustc.maomao.patterns.memento.CareTaker;
 import ustc.maomao.patterns.state.OrderState;
-import ustc.maomao.patterns.state.PlacedState;
+import ustc.maomao.patterns.state.PlacingState;
 import ustc.maomao.patterns.templatemethod.PayOrder;
 import ustc.maomao.patterns.visitor.FoodLevelVisitor;
 import ustc.maomao.patterns.visitor.FoodTypeVisitor;
@@ -63,7 +65,7 @@ public class Patron extends Employee implements Colleague {
 	public MealOrder orderFood() {
 
 		order = new MealOrder(this);
-
+		/*
 		SimpleFood f1 = new SimpleFood();
 		f1.setName("花生米");
 		f1.order(5);
@@ -86,7 +88,19 @@ public class Patron extends Employee implements Colleague {
 		f4.setName("皮蛋豆腐");
 		f4.order(7);
 		order.addFood(f4);
-
+		*/
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					OrderFood frame = new OrderFood(new Patron());
+					frame.setVisible(true);
+					order=frame.getMealOrder();
+					} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			});
+		
 		return order;
 	}
 

@@ -45,7 +45,6 @@ public class SingletonTester implements PatternTester {
 		for (ConfigurationClient1 cc1 : client1s) {
 			cc1.useConfiguration();
 		}
-
 		// ConfigurationClient2对象使用Configuration单例对象
 		for (ConfigurationClient2 cc2 : client2s) {
 			cc2.useConfiguration();

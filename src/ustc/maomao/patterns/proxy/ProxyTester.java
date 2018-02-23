@@ -25,7 +25,6 @@ public class ProxyTester implements PatternTester {
 	 */
 	@Override
 	public void test() {
-		
 		//构造菜单项列表数据源
 		List<MenuItem> menuItems=new ArrayList<MenuItem>();
 		for(int i=0;i<10;i++){

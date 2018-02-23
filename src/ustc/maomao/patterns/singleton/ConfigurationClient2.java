@@ -15,6 +15,8 @@ package ustc.maomao.patterns.singleton;
 public class ConfigurationClient2 {
      public void useConfiguration(){
     	 Configuration instance=Configuration.getInstance();
+    	 System.out.println("name: "+instance.getName());
+    	 System.out.println("password: "+instance.getPassword());
     	 //use instance (just print its hashcode)
     	 System.out.println("正在被使用的Configuration对象的hash code是："+instance.hashCode());
      }

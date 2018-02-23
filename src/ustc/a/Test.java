@@ -46,6 +46,33 @@ public class Test {
 		//System.out.println(df.format(day));
 		//readJson("fun.json");
 		//System.out.println("Success!");
+		 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();   
+		    DocumentBuilder builder=null;  
+		    try {   
+		    builder = factory .newDocumentBuilder();   
+		    } catch (ParserConfigurationException pce) {   
+		    pce.printStackTrace();  
+		    } 
+		    try {
+		    	
+		    Document doc = null;   
+		    doc = builder.parse("./info.xml"); 
+		    System.out.println(doc);
+		    }
+		    catch(Exception e)
+		    {
+		    		e.printStackTrace();
+		    }
+		System.out.println("Success!");
+
+    }
+	//UI
+	public static void testUI()
+	{
+		
+	}
+	public static void testReadJson()
+	{
 		try
 		{ 
 			FileOutputStream out = null;
@@ -65,9 +92,8 @@ public class Test {
 		}
 		System.out.println("Success!");
 
-
-    }
-	//度json文件
+	}
+	//读json文件
 	public static void readJson(String path)
 	{
 		 JsonParser parse =new JsonParser();  //创建json解析器
